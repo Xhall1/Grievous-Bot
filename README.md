@@ -1,6 +1,8 @@
 # Grievous Bot
 
-![Grievous Banner](assets/logo.png)
+<p align="center">
+  <img src="assets/logo.png" alt="Grievous Banner" width="150" height="150">
+</p>
 
 
 ## Project Overview
