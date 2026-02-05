@@ -1,5 +1,6 @@
 package com.xhall;
 
+import com.xhall.commands.Ping;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -10,8 +11,11 @@ public class Main {
         Dotenv config = Dotenv.configure().load();
         String token = config.get("TOKEN");
 
-        JDA jda = JDABuilder.createDefault(token).build();
+        JDA jda = JDABuilder
+                .createDefault(token)
+                .build();
 
         jda.addEventListener(new Listeners());
+        jda.addEventListener(new Ping());
     }
 }

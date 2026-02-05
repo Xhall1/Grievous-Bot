@@ -47,4 +47,5 @@ For security reasons, the bot token is not included in the source code. You must
 
 ```properties
 TOKEN=YOUR_DISCORD_TOKENN
+SERVER_ID=YOUR_PRIVATE_SERVER_ID
 ```
