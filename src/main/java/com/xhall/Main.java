@@ -1,13 +1,12 @@
 package com.xhall;
 
-import com.xhall.commands.Collect;
-import com.xhall.commands.Duel;
-import com.xhall.commands.Kill;
-import com.xhall.commands.Ping;
+import com.xhall.commands.fun.Collect;
+import com.xhall.commands.fun.Duel;
+import com.xhall.commands.fun.Kill;
+import com.xhall.commands.utility.Ping;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Guild;
 
 public class Main {
     public static void main(String[] args) {

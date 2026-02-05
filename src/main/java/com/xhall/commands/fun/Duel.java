@@ -1,4 +1,4 @@
-package com.xhall.commands;
+package com.xhall.commands.fun;
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;

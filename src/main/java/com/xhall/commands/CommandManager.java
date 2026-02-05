@@ -1,4 +1,4 @@
-package com.xhall;
+package com.xhall.commands;
 
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;

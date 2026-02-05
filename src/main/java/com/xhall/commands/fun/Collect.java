@@ -1,10 +1,8 @@
-package com.xhall.commands;
+package com.xhall.commands.fun;
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionMapping;
-
-import java.util.Locale;
 
 public class Collect extends ListenerAdapter {
 
