@@ -1,5 +1,6 @@
 package com.xhall;
 
+import com.xhall.commands.Collect;
 import com.xhall.commands.Ping;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
@@ -15,7 +16,10 @@ public class Main {
                 .createDefault(token)
                 .build();
 
-        jda.addEventListener(new Listeners());
-        jda.addEventListener(new Ping());
+        jda.addEventListener(
+                new Listeners(),
+                new Ping(),
+                new Collect()
+                );
     }
 }
