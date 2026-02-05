@@ -27,5 +27,8 @@ public class Listeners extends ListenerAdapter {
                 Commands.slash("collect", "Add an item to the collection (I specially recommend you a lightsaber)")
                         .addOption(OptionType.STRING, "item", "Lightsaber to collect", true)
         ).queue();
+
+        // Duel Command
+        guild.upsertCommand("duel", "Have a fantastic duel against Grievous!").queue();
     }
 }
