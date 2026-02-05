@@ -10,24 +10,4 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class Listeners extends ListenerAdapter {
 
-//    @Override
-//    public void onReady(ReadyEvent event) {
-//        JDA jda = event.getJDA();
-//        for(Guild guild : jda.getGuilds())
-//        {
-//            for(TextChannel channel : guild.getTextChannels())
-//            {
-//                channel.sendMessage("Hello there! :)").queue();
-//            }
-//        }
-//    }
-
-    @Override
-    public void onMessageReceived(MessageReceivedEvent event) {
-
-        if(event.getAuthor().isBot()) return;
-        MessageChannel msg = event.getChannel();
-
-        msg.sendMessage(event.getMessage().getContentRaw()).queue();
-    }
 }
