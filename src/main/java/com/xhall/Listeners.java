@@ -30,5 +30,11 @@ public class Listeners extends ListenerAdapter {
 
         // Duel Command
         guild.upsertCommand("duel", "Have a fantastic duel against Grievous!").queue();
+
+        // Kill Command
+        guild.upsertCommand(
+                Commands.slash("kill", "Send Grievous to kill a user!")
+                        .addOption(OptionType.USER, "user", "type a user who's in the server")
+        ).queue();
     }
 }

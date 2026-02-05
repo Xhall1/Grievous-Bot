@@ -2,6 +2,7 @@ package com.xhall;
 
 import com.xhall.commands.Collect;
 import com.xhall.commands.Duel;
+import com.xhall.commands.Kill;
 import com.xhall.commands.Ping;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
@@ -21,7 +22,8 @@ public class Main {
                 new Listeners(),
                 new Ping(),
                 new Collect(),
-                new Duel()
+                new Duel(),
+                new Kill()
                 );
     }
 }
