@@ -1,16 +1,32 @@
 package com.xhall.commands.fun;
 
+import com.xhall.commands.ICommand;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Duel extends ListenerAdapter {
+public class Duel implements ICommand {
 
     @Override
-    public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        if(!event.getName().equals("duel")) return;
+    public String getName() {
+        return "duel";
+    }
 
+    @Override
+    public String getDescription() {
+        return "Have a fantastic duel against Grievous!";
+    }
+
+    @Override
+    public List<OptionData> getOptions() {
+        return null;
+    }
+
+    @Override
+    public void execute(SlashCommandInteractionEvent event) {
         event.reply("Fighting...").queue();
 
         int grievousNum = (int) (Math.random() * 10) + 1;

@@ -1,5 +1,6 @@
 package com.xhall;
 
+import com.xhall.commands.CommandManager;
 import com.xhall.commands.fun.Collect;
 import com.xhall.commands.fun.Duel;
 import com.xhall.commands.fun.Kill;
@@ -15,14 +16,15 @@ public class Main {
 
         JDA jda = JDABuilder
                 .createDefault(token)
+                .addEventListeners(new CommandManager())
                 .build();
 
-        jda.addEventListener(
-                new Listeners(),
-                new Ping(),
-                new Collect(),
-                new Duel(),
-                new Kill()
-                );
+//        jda.addEventListener(
+//                new Listeners(),
+//                new Ping(),
+//                new Collect(),
+//                new Duel(),
+//                new Kill()
+//                );
     }
 }
