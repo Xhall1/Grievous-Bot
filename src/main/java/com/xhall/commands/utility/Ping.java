@@ -1,6 +1,8 @@
 package com.xhall.commands.utility;
 
 import com.xhall.commands.ICommand;
+import com.xhall.utils.EmbedUtils;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
@@ -26,8 +28,18 @@ public class Ping implements ICommand {
 
     @Override
     public void execute(SlashCommandInteractionEvent event) {
+
+        EmbedBuilder embed = EmbedUtils.create();
+
         long ping = event.getJDA().getGatewayPing();
 
-        event.reply("Time to process: " + ping + "ms. You are a bold one").queue();
+        embed.setDescription(
+                "Time to process: "
+                        + ping
+                        + "ms. You are a bold one"
+        );
+
+        event.replyEmbeds(embed.build()).queue();
+
     }
 }

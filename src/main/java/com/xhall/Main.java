@@ -19,12 +19,5 @@ public class Main {
                 .addEventListeners(new CommandManager())
                 .build();
 
-//        jda.addEventListener(
-//                new Listeners(),
-//                new Ping(),
-//                new Collect(),
-//                new Duel(),
-//                new Kill()
-//                );
     }
 }
