@@ -1,4 +1,4 @@
-package com.xhall.services;
+package com.xhall.services.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
