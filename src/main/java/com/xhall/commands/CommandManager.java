@@ -3,6 +3,7 @@ package com.xhall.commands;
 import com.xhall.commands.fun.Collect;
 import com.xhall.commands.fun.Duel;
 import com.xhall.commands.fun.Kill;
+import com.xhall.commands.swapi.Planet;
 import com.xhall.commands.utility.Ping;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -21,7 +22,7 @@ public class CommandManager extends ListenerAdapter {
         add(new Collect());
         add(new Duel());
         add(new Kill());
-
+        add(new Planet());
     }
 
     @Override

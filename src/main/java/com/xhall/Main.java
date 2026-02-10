@@ -5,6 +5,7 @@ import com.xhall.commands.fun.Collect;
 import com.xhall.commands.fun.Duel;
 import com.xhall.commands.fun.Kill;
 import com.xhall.commands.utility.Ping;
+import com.xhall.managers.InteractionManager;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -17,6 +18,7 @@ public class Main {
         JDA jda = JDABuilder
                 .createDefault(token)
                 .addEventListeners(new CommandManager())
+                .addEventListeners(new InteractionManager())
                 .build();
 
     }
