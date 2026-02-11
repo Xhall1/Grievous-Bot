@@ -64,4 +64,106 @@ public class SwapiService {
             return null;
         }
     }
+
+    public JsonObject getPeople(String name)
+    {
+        String url = URL + "people/?search" + name;
+
+        Request request = new Request.Builder().url(url).build();
+
+        try(Response response = client.newCall(request).execute())
+        {
+            if(!response.isSuccessful()) return null;
+
+            String jsonData = response.body().string();
+
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+            JsonArray results = jsonObject.getAsJsonArray("results");
+
+            if(results.size() > 0) return results.get(0).getAsJsonObject();
+
+
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
+    public JsonArray getPeopleList(int page)
+    {
+       String url = URL + "people/?page" + page;
+       Request request = new Request.Builder().url(url).build();
+
+       try(Response response = client.newCall(request).execute())
+       {
+           if(!response.isSuccessful()) return null;
+
+           String jsonData = response.body().string();
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+
+            return jsonObject.getAsJsonArray("results");
+
+       }
+       catch(IOException e)
+       {
+           e.printStackTrace();
+           return null;
+       }
+
+    }
+
+    public JsonObject getSpecies(String name)
+    {
+        String url = URL + "species/?search" + name;
+
+        Request request = new Request.Builder().url(url).build();
+
+        try(Response response = client.newCall(request).execute())
+        {
+            if(!response.isSuccessful()) return null;
+
+            String jsonData = response.body().string();
+
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+            JsonArray results = jsonObject.getAsJsonArray("results");
+
+            if(results.size() > 0) return results.get(0).getAsJsonObject();
+
+
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
+    public JsonArray getSpeciesList(int page)
+    {
+        String url = URL + "species/?search=" + page;
+        Request request = new Request.Builder().url(url).build();
+
+        try(Response response = client.newCall(request).execute())
+        {
+            if(!response.isSuccessful()) return null;
+
+            String jsonData = response.body().string();
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+
+            return jsonObject.getAsJsonArray("results");
+
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
 }
