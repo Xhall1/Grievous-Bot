@@ -1,10 +1,6 @@
 package com.xhall;
 
-import com.xhall.commands.CommandManager;
-import com.xhall.commands.fun.Collect;
-import com.xhall.commands.fun.Duel;
-import com.xhall.commands.fun.Kill;
-import com.xhall.commands.utility.Ping;
+import com.xhall.commands.managers.CommandManager;
 import com.xhall.managers.InteractionManager;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;

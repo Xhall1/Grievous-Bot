@@ -1,4 +1,4 @@
-package com.xhall.integrations;
+package com.xhall.integrations.menus.interfaces;
 
 import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent;
 
