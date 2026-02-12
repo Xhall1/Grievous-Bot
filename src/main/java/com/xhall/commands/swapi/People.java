@@ -3,7 +3,7 @@ package com.xhall.commands.swapi;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.xhall.commands.ICommand;
+import com.xhall.commands.interfaces.ICommand;
 import com.xhall.services.api.SwapiService;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
 import net.dv8tion.jda.api.components.selections.StringSelectMenu;

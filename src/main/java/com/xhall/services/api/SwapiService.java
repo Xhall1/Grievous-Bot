@@ -166,4 +166,27 @@ public class SwapiService {
         }
 
     }
+
+    public JsonArray getStarships(int page)
+    {
+        String url = URL + "starships/?page=" + page;
+
+        Request request = new Request.Builder().url(url).build();
+
+        try (Response response = client.newCall(request).execute())
+        {
+            if(!response.isSuccessful()) return null;
+
+            String jsonData = response.body().string();
+
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+
+            return jsonObject.getAsJsonArray("results");
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

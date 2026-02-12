@@ -1,6 +1,6 @@
 package com.xhall.integrations.menus;
 
-import com.xhall.integrations.ISelectMenu;
+import com.xhall.integrations.menus.interfaces.ISelectMenu;
 import com.xhall.utils.EmbedUtils;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent;
