@@ -1,7 +1,7 @@
 package com.xhall;
 
 import com.xhall.commands.managers.CommandManager;
-import com.xhall.managers.InteractionManager;
+import com.xhall.integrations.managers.InteractionManager;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

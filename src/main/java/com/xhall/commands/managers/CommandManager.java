@@ -1,9 +1,11 @@
 package com.xhall.commands.managers;
 
+import com.xhall.commands.admin.CreateRole;
 import com.xhall.commands.fun.Collect;
 import com.xhall.commands.fun.Duel;
 import com.xhall.commands.fun.Kill;
 import com.xhall.commands.interfaces.ICommand;
+import com.xhall.commands.modals.Feedback;
 import com.xhall.commands.swapi.People;
 import com.xhall.commands.swapi.Planet;
 import com.xhall.commands.swapi.Starship;
@@ -28,6 +30,8 @@ public class CommandManager extends ListenerAdapter {
         add(new Planet());
         add(new People());
         add(new Starship());
+        add(new Feedback());
+        add(new CreateRole());
     }
 
     @Override
