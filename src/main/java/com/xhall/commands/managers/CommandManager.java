@@ -1,6 +1,7 @@
 package com.xhall.commands.managers;
 
 import com.xhall.commands.admin.AssignRole;
+import com.xhall.commands.admin.Ban;
 import com.xhall.commands.admin.CreateRole;
 import com.xhall.commands.fun.Collect;
 import com.xhall.commands.fun.Duel;
@@ -34,6 +35,7 @@ public class CommandManager extends ListenerAdapter {
         add(new Feedback());
         add(new CreateRole());
         add(new AssignRole());
+        add(new Ban());
     }
 
     @Override
