@@ -1,4 +1,4 @@
-package com.xhall.managers;
+package com.xhall.integrations.managers;
 
 import com.xhall.integrations.buttons.StarshipButton;
 import com.xhall.integrations.buttons.interfaces.IButton;

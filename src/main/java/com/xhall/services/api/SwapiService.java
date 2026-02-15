@@ -189,4 +189,32 @@ public class SwapiService {
             return null;
         }
     }
+
+    public JsonArray getFilms(int page)
+    {
+        String url = URL + "films/?search=" + page;
+
+        Request request = new Request.Builder().url(url).build();
+
+        try(Response response = client.newCall(request).execute())
+        {
+            if(!response.isSuccessful()) return null;
+
+            String jsonData = response.body().string();
+
+            JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
+
+            JsonArray results = jsonObject.getAsJsonArray("results");
+
+            return results;
+
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
 }
